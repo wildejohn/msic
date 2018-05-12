@@ -40,14 +40,13 @@ def getNewResults():
     # parse the downloaded data and pull out just the names
     # this will stop working if the site structure changes
     soup = BeautifulSoup(response.text, "lxml")
-   # return soup.get_text().find('Dazs') > 0
-    return soup.get_text().find('Alexander') > 0
+    return soup.get_text().find('Dazs') > 0
 
 def sendEmail():
     print("Sending email")
 
     msg = EmailMessage()
-    msg.set_content("\n".join(setdiff))
+    msg.set_content("go shopping")
 
     email = str(os.environ.get('EMAIL'))
     pword = str(os.environ.get('PWORD'))
