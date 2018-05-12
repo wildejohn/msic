@@ -43,8 +43,8 @@ def getNewResults():
    # return soup.get_text().find('Dazs') > 0
     return soup.get_text().find('Alexander') > 0
 
-def sendEmail(setdiff):
-    print(str(setdiff))
+def sendEmail():
+    print("Sending email")
 
     msg = EmailMessage()
     msg.set_content("\n".join(setdiff))
